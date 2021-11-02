@@ -22,8 +22,6 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Scores", "About", "Home")</li>
-                </ul>
-                <ul class="nav navbar-nav">
                     @{
                         if (Session["user_id"] == null)
                         {
@@ -32,9 +30,11 @@
                         else
                         {
                             <li>@Html.ActionLink("Vos Sauvegardes", "Contact", "Home")</li>
+                            <li>@Html.ActionLink("Les Utilisateurs", "Index", "Utilisateurs")</li>
                         }
                     }
                 </ul>
+                
                 <ul class="nav navbar-nav navbar-right">
                     @{
                         if (Session["user_id"] == null)
