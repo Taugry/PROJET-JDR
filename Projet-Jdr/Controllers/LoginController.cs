@@ -72,5 +72,24 @@ namespace Exo_GestionProduit.Controllers
         {
             return View();
         }
+
+        public ActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Register([Bind(Include = "Id,Username,Email,Password")] Utilisateur utilisateur)
+        {
+            if (ModelState.IsValid)
+            {
+                context.Utilisateurs.Add(utilisateur);
+                context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(utilisateur);
+        }
     }
 }

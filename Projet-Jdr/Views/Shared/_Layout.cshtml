@@ -39,11 +39,11 @@
                     @{
                         if (Session["user_id"] == null)
                         {
-                            <li>@Html.ActionLink("Connexion", "Index", "Login")</li>
+                            <li>@Html.ActionLink("Login/Register", "Index", "Login")</li>
                         }
                         else
                         {
-                            <li>@Html.ActionLink("Deconnexion", "Logout", "Login")</li>
+                            <li>@Html.ActionLink("Logout", "Logout", "Login")</li>
                         }
                     }
                 </ul>
