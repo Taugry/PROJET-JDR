@@ -138,6 +138,10 @@
     <Compile Include="Migrations\202111021407567_InitialModel.Designer.cs">
       <DependentUpon>202111021407567_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202111030826576_ModifUtilisateur.cs" />
+    <Compile Include="Migrations\202111030826576_ModifUtilisateur.Designer.cs">
+      <DependentUpon>202111030826576_ModifUtilisateur.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\MyContext.cs" />
     <Compile Include="Models\Utilisateur.cs" />
@@ -184,6 +188,8 @@
     <Content Include="Views\Utilisateurs\Details.cshtml" />
     <Content Include="Views\Utilisateurs\Edit.cshtml" />
     <Content Include="Views\Utilisateurs\Index.cshtml" />
+    <Content Include="Views\Login\Authorisation.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -204,6 +210,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202111021407567_InitialModel.resx">
       <DependentUpon>202111021407567_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111030826576_ModifUtilisateur.resx">
+      <DependentUpon>202111030826576_ModifUtilisateur.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

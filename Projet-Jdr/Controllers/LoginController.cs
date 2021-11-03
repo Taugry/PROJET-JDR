@@ -5,10 +5,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Projet_Jdr.Controllers
+namespace Exo_GestionProduit.Controllers
 {
     public class LoginController : Controller
     {
+
         private MyContext context = new MyContext();
 
         // GET: Login
@@ -29,11 +30,17 @@ namespace Projet_Jdr.Controllers
                 {
                     if (userDB.Password.Equals(user.Password))
                     {
+                        /*
+                         * Session est un objet (dictionnaire) cree cote serveur, accessible par l'ensemble des controleurs
+                         * disponible tant que l'application st en cour d'excution
+                         * un session possede une duree par defaut de 20min
+                         */
                         if (userDB.Admin)
                         {
                             Session["Admin"] = userDB.Admin; //enregistrement de userdb.admin dans la session
                         }
                         Session["user_id"] = userDB.Id;
+                        //Session.Timeout = 1; // permet de limiter la duree de la ssion ici a 1 min
                         return RedirectToAction("Index", "Home");
                     }
                     else
