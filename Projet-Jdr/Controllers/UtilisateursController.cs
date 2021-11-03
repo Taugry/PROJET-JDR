@@ -6,10 +6,12 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Projet_Jdr.Filters;
 using Projet_Jdr.Models;
 
 namespace Projet_Jdr.Controllers
 {
+    [AuthorisationFilter]
     public class UtilisateursController : Controller
     {
         private MyContext db = new MyContext();
