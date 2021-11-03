@@ -179,8 +179,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Login\Authorisation.cshtml" />
-    <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Utilisateurs\Create.cshtml" />
     <Content Include="Views\Utilisateurs\Delete.cshtml" />
     <Content Include="Views\Utilisateurs\Details.cshtml" />
